@@ -17,6 +17,10 @@ class SessionsController < ApplicationController
     end
 
     def destroy 
-
+        reset_session
+        #if this doesn't work something is very wrong 
+        if session[:user_id] == nil
+            redirect_to '/login', notice: "You are logged out"
+        end 
     end
 end
