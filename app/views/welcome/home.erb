@@ -1,0 +1,7 @@
+<% if @user %> <br> 
+    <img src=<%= @user.image %>> <br><br> 
+    Name: <%= @user.name %> <br> 
+    Email: <%= @user.email %> <br> 
+<% else %> 
+    <%= link_to "Continue with Facebook", '/auth/facebook' %>
+<% end %> 
